@@ -1,0 +1,34 @@
+{
+  "name": "contacts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "npx sequelize-cli db:migrate",
+    "nodemon": "npx nodemon server.js",
+    "start-server": "node server.js",
+    "start": "NODE_ENV=prod npm-run-all migrate start-server",
+    "dev": "NODE_ENV=dev npm-run-all migrate nodemon",
+    "test-sv": "NODE_ENV=test npm-run-all migrate nodemon"
+  },
+  "author": "semih-kaya",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "npm-run-all": "^4.1.5",
+    "sequelize": "^6.21.6",
+    "uuid": "^9.0.0",
+    "validator": "^13.7.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
